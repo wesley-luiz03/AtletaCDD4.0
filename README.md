@@ -1,57 +1,44 @@
-🏃‍♂️ Projeto: Sistema de Atletas (OOP em Python)
-Este projeto demonstra os conceitos de Programação Orientada a Objetos (POO) em Python, usando uma hierarquia de classes para representar diferentes tipos de atletas: Corredores, Nadadores, Ciclistas e o TriAtleta, que combina as três modalidades.
 
-🧠 Conceitos Aplicados
-Herança
+# 🏃‍♂️ Projeto: Sistema de Atletas (OOP em Python)
 
-Herança múltipla
+Este projeto demonstra os conceitos de Programação Orientada a Objetos (POO) em Python, usando uma hierarquia de classes para representar diferentes tipos de atletas: **Corredores**, **Nadadores**, **Ciclistas** e o **TriAtleta**, que combina as três modalidades.
 
-Polimorfismo
+## 🧠 Conceitos Aplicados
 
-Encapsulamento
+- Herança
+- Herança múltipla
+- Polimorfismo
+- Encapsulamento
+- Uso de `super()`
 
-Uso de super()
+## 📦 Estrutura das Classes
 
-📦 Estrutura das Classes
-Atleta (Classe base)
-Atributos:
+### `Atleta` (Classe base)
+- Atributos:
+  - `nome`
+  - `aposentado` (booleano)
+  - `aquecimento` (booleano)
+- Métodos:
+  - `Aquecer()`: Simula o aquecimento do atleta.
+  - `Aposentar()`: Marca o atleta como aposentado.
 
-nome
-
-aposentado (booleano)
-
-aquecimento (booleano)
-
-Métodos:
-
-Aquecer(): Simula o aquecimento do atleta.
-
-Aposentar(): Marca o atleta como aposentado.
-
-Corredor, Nadador, Ciclista (Subclasses)
-Cada classe herda de Atleta e implementa um método específico:
-
-correr() — para Corredor
-
-nadar() — para Nadador
-
-ciclismo() — para Ciclista
+### `Corredor`, `Nadador`, `Ciclista` (Subclasses)
+Cada classe herda de `Atleta` e implementa um método específico:
+- `correr()` — para `Corredor`
+- `nadar()` — para `Nadador`
+- `ciclismo()` — para `Ciclista`
 
 Esses métodos verificam:
+- Se o atleta está aposentado
+- Se o atleta está aquecido
+- E então executam a ação correta
 
-Se o atleta está aposentado
+### `TriAtleta`
+Herda de `Corredor`, `Nadador` e `Ciclista`, representando um atleta que pratica as três modalidades. Com isso, pode acessar todos os métodos herdados (`correr`, `nadar`, `ciclismo`).
 
-Se o atleta está aquecido
+## ✅ Exemplo de Uso
 
-E então executam a ação correta
-
-TriAtleta
-Herda de Corredor, Nadador e Ciclista, representando um atleta que pratica as três modalidades. Com isso, pode acessar todos os métodos herdados (correr, nadar, ciclismo).
-
-✅ Exemplo de Uso
-python
-Copiar
-Editar
+```python
 atleta1 = TriAtleta("João")
 
 atleta1.correr()       # Deve pedir para aquecer
@@ -59,17 +46,11 @@ atleta1.Aquecer()      # Atleta se aquece
 atleta1.nadar()        # Pode nadar
 atleta1.Aposentar()    # Atleta se aposenta
 atleta1.ciclismo()     # Não pode competir após aposentar
-🛠️ Melhorias Possíveis
-Adicionar mensagens mais consistentes nas modalidades (ex: correção de "atletica").
+```
 
-Implementar interface gráfica (GUI) simples.
+## 📚 Requisitos
+- Python 3.x
 
-Criar pontuação por atividade.
-
-Armazenar atletas e status em arquivos JSON.
-
-📚 Requisitos
-Python 3.x
-
-🤝 Contribuição
-Sugestões e melhorias são bem-vindas! Basta abrir uma issue ou pull request.
+## 🤝 Contribuição
+Wesley Luiz Moreira da Silva
+Paulo Rafael Brandão Santos
