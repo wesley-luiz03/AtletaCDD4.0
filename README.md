@@ -52,5 +52,4 @@ atleta1.ciclismo()     # Não pode competir após aposentar
 - Python 3.x
 
 ## 🤝 Contribuição
-Wesley Luiz Moreira da Silva
-Paulo Rafael Brandão Santos
+Wesley Luiz Moreira da Silva e Paulo Rafael Brandão Santos
